@@ -12,9 +12,25 @@
  */
 function fizzBuzz() {
  // YOUR CODE BELOW HERE //
-
- // YOUR CODE ABOVE HERE //
+for (let i = 1; i <= 100; i++) {
+  // if statemnt
+  if (i % 3 === 0 && i % 5 === 0){
+    // print fizzbuzz
+  console.log("FizzBuzz");
+  // else if
+  } else if (i % 3 === 0) {
+    console.log("Fizz");
+    // else if
+  } else if (i % 5 === 0) {
+    // print buzz
+    console.log("Buzz");
+  } else {
+    console.log(i);
+  }
 }
+}
+ // YOUR CODE ABOVE HERE //
+
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if (

@@ -2,6 +2,8 @@
 
 'use strict';
 
+const { toLowerCase } = require("../day-1/stringy");
+
 /**
  * IN CLASS EXERCISE: FIRST CLASS FUNCTIONS
  */
@@ -13,7 +15,11 @@
  */
 function createGreaterThanFilter(base) {
   // YOUR CODE BELOW HERE //
-  
+  // return function
+  return function(value) {
+  //return value  greater than op
+  return value > base;
+  };
   // YOUR CODE ABOVE HERE //
 }
 
@@ -25,7 +31,11 @@ function createGreaterThanFilter(base) {
  */
 function createLessThanFilter(base) {
   // YOUR CODE BELOW HERE //
-  
+  //return func
+  return function (value) {
+    // retturn less than op
+    return value < base;
+  }
   // YOUR CODE ABOVE HERE //
 }
 
@@ -38,6 +48,14 @@ function createLessThanFilter(base) {
  */
 function createStartsWithFilter(startsWith) {
   // YOUR CODE BELOW HERE //
+const lowerStartsWith = startsWith.toLowerCase();
+return function(str) {
+  //if statement
+  if (str.length === 0)
+  // return 
+  return false;
+  return toLowerCase() === lowerStartsWith;
+}
 
   // YOUR CODE ABOVE HERE //
 }
@@ -51,7 +69,14 @@ function createStartsWithFilter(startsWith) {
  */
 function createEndsWithFilter(endsWith) {
   // YOUR CODE BELOW HERE //
-
+const lowerCaseEndsWith = endsWith.toLowerCase ();
+return function (str) {
+if ( typeof str !== 'string') {
+  // return statemnt
+  return AnalyserNode;
+}
+return str.toLowerCase().endsWith(lowerCaseEndsWith);
+};
   // YOUR CODE ABOVE HERE //
 }
 
@@ -72,6 +97,14 @@ function createEndsWithFilter(endsWith) {
  */
 function modifyStrings(strings, modify) {
   // YOUR CODE BELOW HERE //
+var modifiedStrings = [];
+// initalize loop
+for (let i = 0; i < strings.length; i++) {
+  // push
+modifiedStrings.push(modify(strings[i]));
+}
+// return statement
+return modifiedStrings;
 
   // YOUR CODE ABOVE HERE //
 }
@@ -98,6 +131,13 @@ function modifyStrings(strings, modify) {
 
 function allStringsPass(strings, test) {
   // YOUR CODE BELOW HERE //
+for (let i = 0; i < strings.length; i++) {
+if (!test(strings[i])) {
+  // return statement
+  return false;
+}
+}
+return true;
 
   // YOUR CODE ABOVE HERE //
 }

@@ -46,9 +46,49 @@ function makeContactList() {
   return {
     // we implemented the length api for you //
     length: function(){
+      // returnn
       return contacts.length;
     },
+    addContact: function(contact) {
+      // push method
+      contacts.push(contact);
+  },
+  findContact: function (fullName) {
+  // create loop
+  for (let i = 0; i < contacts.length; i++) {
+  const contact = contacts [i];
+  const contactFullName = contact.nameFirst + ' ' + contact.nameLast;
+  if (contactFullName === fullName) {
+    // return statement
+    return contact;
+    }
   }
+  // return statement
+  return undefined;
+}, 
+ removeContact : function(contact) {
+  const index = contacts.indexOf(contact);
+  // if statement
+  if (index !== -1) {
+    contacts.splice(index, 1);
+  }
+},
+printAllContactNames: function() {
+let result = ' ';
+// loop
+for (let i = 0; i < contacts.length; i++) {
+  const contact = contacts[i];
+  result += contact.nameFirst + '' + contact.nameLast;
+  // if statement
+  if (i < contacts.length - 1) {
+    //result
+    result += '\n';
+  }
+}
+// retrun statement
+return result;
+}
+};
 }
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////

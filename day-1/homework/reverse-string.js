@@ -21,9 +21,26 @@
 
 function reverseString(input) {
   // YOUR CODE BELOW HERE //
+// create reverseString function
+
+ // console.log(reverseString('hello'));
+
+
+  // create a loop
+  // use let
+  let reversedStr = '';
+  // create for 
+  for ( let i = input.length - 1; i >= 0; i--) {
+    // increment minus 
+     //reverse str [i]
+    reversedStr += input[i];
+ }
+ // return statement
+  return reversedStr;
+ }
 
   // YOUR CODE ABOVE HERE //
-}
+
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if (

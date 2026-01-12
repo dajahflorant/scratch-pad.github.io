@@ -16,6 +16,7 @@
  */
 function isArray(value) {
   // YOUR CODE BELOW HERE //
+return Array.isArray(value); // value
 
   // YOUR CODE ABOVE HERE //
 }
@@ -36,9 +37,30 @@ function isArray(value) {
  */
 function isObject(value) {
   // YOUR CODE BELOW HERE //
-  
-  // YOUR CODE ABOVE HERE //
+  // create if statement
+  if (value === null){
+  // return false
+  return false;
+  // else if statement
+} else if (value instanceof Date) {
+  // return false
+  return false;
+  // else if statement
+} else  if ( Array.isArray(value)){
+  // return
+return false;
+// else if statement || } else if (type of === value){
+} else if (typeof value === 'object'){
+  // return true
+//} else {
+  return true;
+} else {
+
+  return false;
 }
+}
+  // YOUR CODE ABOVE HERE //
+
 
 /**
  * Given an input value, return true if is either an Array or an an Object
@@ -48,7 +70,23 @@ function isObject(value) {
  */
 function isCollection(value) {
   // YOUR CODE BELOW HERE //
-
+    if (value === null){
+    // return false
+    return false;
+    // else if statement
+  } else  if ( Array.isArray(value)){
+    // return
+  return true;
+  // else if statement || } else if (type of === value){
+  } else if (typeof value === 'object'){
+    // return true
+  //} else {
+   return true;
+  } else {
+  
+    return false;
+  }
+  
   // YOUR CODE ABOVE HERE //
 }
 
@@ -73,7 +111,24 @@ function isCollection(value) {
  */
 function typeOf(value) {
   // YOUR CODE BELOW HERE //
-  
+  // create if statement
+  if (value === null) {
+    // return null
+    return "null";
+  }
+  // if statement
+  if (Array.isArray(value)){
+    // return array
+  return "array";
+  }
+  // create if statement
+  if (value instanceof Date) {
+    // return date
+    return "date";
+  }
+  // return  typeof value
+  return typeof value;
+
   // YOUR CODE ABOVE HERE //
 }
 

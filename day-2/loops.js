@@ -12,6 +12,10 @@
  */
 function printArrayValues(array) {
   // YOUR CODE BELOW HERE //
+for (let i = 0; i < array.length; i++) {
+  //print to console
+  console.log(array[i]);
+}
 
   // YOUR CODE ABOVE HERE //
 }
@@ -22,6 +26,11 @@ function printArrayValues(array) {
  */
 function printArrayValuesInReverse(array) {
   // YOUR CODE BELOW HERE //
+  // create loop
+for (let i = array.length - 1; i >= 0; i--) {
+  // print to console
+  console.log(array[i]);
+}
 
   // YOUR CODE ABOVE HERE //
 }
@@ -31,7 +40,8 @@ function printArrayValuesInReverse(array) {
  */
 function getObjectKeys(object) {
   // YOUR CODE BELOW HERE //
-
+  // return array 
+return Object.keys(object);
   // YOUR CODE ABOVE HERE //
 }
 
@@ -41,7 +51,11 @@ function getObjectKeys(object) {
  */
 function printObjectKeys(object) {
   // YOUR CODE BELOW HERE //
-
+  //loop ovr obj
+for (const key in object) {
+  // print to console
+  console.log(key); 
+  }
   // YOUR CODE ABOVE HERE //
 }
 
@@ -50,7 +64,8 @@ function printObjectKeys(object) {
  */
 function getObjectValues(object) {
   // YOUR CODE BELOW HERE //
-
+  // return
+return Object.values(object);
   // YOUR CODE ABOVE HERE //
 }
 
@@ -60,7 +75,11 @@ function getObjectValues(object) {
  */
 function printObjectValues(object) {
   // YOUR CODE BELOW HERE //
-
+// create loop
+for (const key in object) { 
+  // print to the console
+  console.log(object[key]);
+}
   // YOUR CODE ABOVE HERE //
 }
 
@@ -69,6 +88,8 @@ function printObjectValues(object) {
  */
 function getObjectLength(object) {
   // YOUR CODE BELOW HERE //
+  // return num
+return Object.keys(object).length;
 
   // YOUR CODE ABOVE HERE //
 }
@@ -79,7 +100,15 @@ function getObjectLength(object) {
  */
 function printObjectValuesInReverse(object) {
   // YOUR CODE BELOW HERE //
-  
+  const keys = Object.keys(object);
+  // reverse key
+  keys.reverse();
+  // initiate loop
+  for (let i = 0; i < keys.length; i++) {
+    const key = keys[i];
+    // print values  to console
+    console.log(object[key]);
+  }
   // YOUR CODE ABOVE HERE //
 }
 
@@ -97,4 +126,5 @@ if (
   module.exports.printObjectKeys = printObjectKeys;
   module.exports.getObjectLength = getObjectLength;
   module.exports.printObjectValuesInReverse = printObjectValuesInReverse;
+
 }

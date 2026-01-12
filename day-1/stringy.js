@@ -15,14 +15,15 @@
 
 /*
 I: Function takes in an input string.
-O: Function returns the length of the input string.
+O: Function returns the length of the input string as a number
 C:
 E:
 */
 
 function length(string) {
   // YOUR CODE BELOW HERE //
-
+// return length of input string
+return string.length;
   // YOUR CODE ABOVE HERE //
 }
 
@@ -31,7 +32,9 @@ function length(string) {
  */
 function toLowerCase(string) {
   // YOUR CODE BELOW HERE //
-
+return string.toLowerCase();
+console.log(toLowerCase);
+// output string
   // YOUR CODE ABOVE HERE //
 }
 
@@ -40,7 +43,9 @@ function toLowerCase(string) {
  */
 function toUpperCase(string) {
   // YOUR CODE BELOW HERE //
-
+return string.toUpperCase();
+console.log(toUpperCase);
+// output the STRING
   // YOUR CODE ABOVE HERE //
 }
 
@@ -59,9 +64,25 @@ function toUpperCase(string) {
  */
 function toDashCase(string) {
   // YOUR CODE BELOW HERE //
+   // make my text lower case
+ string = string.toLowerCase(); // print "hello world"
+
+ // use .split(' ') .join('-') methods below 
+ // use the split method to split my string into an array
+ // use var
+ var array = string.split(" "); // var array = ['hello', 'world]
+ // use the join method to recreate a string
+ // use var
+ var joined = array.join("-"); // var joined = 'hello-world'
+ // return it properly joined
+ return joined;
+// log to console
+console.log(toDashCase("Hello World"));
+ 
+}
 
   // YOUR CODE ABOVE HERE //
-}
+
 
 /**
  * Given an input String and a single character, return true if the String
@@ -77,9 +98,17 @@ function toDashCase(string) {
  */
 function beginsWith(string, char) {
   // YOUR CODE BELOW HERE //
+  // return true
+  // convert to lowercase
+  // if its equal return true
+  return string[0].toLowerCase() === char.toLowerCase();
+}
+
+  //const firstChar = string[0].toLowerCase();
+  //const lowerChar = char.toLowerCase()
 
   // YOUR CODE ABOVE HERE //
-}
+
 
 /**
  * Given an input String and a single character, return true if the String
@@ -93,7 +122,14 @@ function beginsWith(string, char) {
  * TIP: How can you use Array access to your advantage here? How can you
  *      ensure uppercase and lowercase can be compared equally?
  */
-function endsWith(string, char) {
+function endsWith(string, char) { 
+  // convert to lowercase
+const lowerCaseString = string.toLowerCase();
+const lowerCaseChar = char.toLowerCase();
+// compare and return result
+return lowerCaseString[lowerCaseString.length -1] === lowerCaseChar;
+
+
   // YOUR CODE BELOW HERE //
 
   // YOUR CODE ABOVE HERE //
@@ -106,7 +142,10 @@ function endsWith(string, char) {
  */
 function concat(stringOne, stringTwo) {
   // YOUR CODE BELOW HERE //
-
+  // add the strings together to connect
+return stringOne + stringTwo;
+//return key
+console.log(concat);
   // YOUR CODE ABOVE HERE //
 }
 
@@ -123,9 +162,19 @@ function concat(stringOne, stringTwo) {
 function join(stringOne, stringTwo) {
   // YOUR CODE BELOW HERE //
   var args = Array.from(arguments);
-
-  // YOUR CODE ABOVE HERE //
+  // declare string & join
+  var result = '';
+  // create a for loop
+  for (var i = 0; i < args.length; i++) {
+    result += args[i];
+  }
+  // return concatenated string
+  return result;
 }
+console.log(join);
+// log to the console
+  // YOUR CODE ABOVE HERE //
+
 
 /**
  * Given two Strings, return the longest of the two.
@@ -138,6 +187,15 @@ function join(stringOne, stringTwo) {
  */
 function longest(stringOne, stringTwo) {
   // YOUR CODE BELOW HERE //
+// create a if else statement
+if (stringOne.length > stringTwo.length) {
+  return stringOne;
+  // return stringOne
+  // else statement
+} else {
+  // return stringTwo statement
+  return stringTwo;
+  }
 
   // YOUR CODE ABOVE HERE //
 }
@@ -151,9 +209,24 @@ function longest(stringOne, stringTwo) {
  */
 function sortAscending(stringOne, stringTwo) {
   // YOUR CODE BELOW HERE //
+//console.log(stringOne < stringTwo);
+if (stringOne < stringTwo) {
+return 1;
+// else if statement
+} else if (stringOne > stringTwo) {
+  // return 1
+  return -1;
+  // else
+  } else {
+    // return  0statement
+    return 0;
+  }
+}
+//const omparison = stringOne.localCompare(stringTwo);
+// return statment 1 or , -1 , 0
+//return comparison < 0 ? 1: comparison > 0 ? -1 : 0;
 
   // YOUR CODE ABOVE HERE //
-}
 
 /**
  * Given two Strings, return 1 if the first is lower in alphabetical order (meaning later in the alphabet) than
@@ -164,9 +237,22 @@ function sortAscending(stringOne, stringTwo) {
  */
 function sortDescending(stringOne, stringTwo) {
   // YOUR CODE BELOW HERE //
-  
+  // create if statement 
+  if (stringOne > stringTwo) {
+    // return [1]
+    return 1;
+    // else if statement
+  } else if (stringOne < stringTwo) {
+    // return [-1]
+    return -1;
+    // else statement
+  } else {
+    // return statement [0]
+    return 0;
+    }
+  }
   // YOUR CODE ABOVE HERE //
-}
+
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if (
