@@ -69,27 +69,42 @@ return false;
  * TIP: Similar to isObject, but we must return true if the value is an Array.
  */
 function isCollection(value) {
+
   // YOUR CODE BELOW HERE //
-    if (value === null){
-    // return false
-    return false;
-    // else if statement
-  } else  if ( Array.isArray(value)){
-    // return
+//**if (value === null){
+  if ( Array.isArray(value) ) {
+
+    typeof value === 'object' && value !== null && (date condition)
+    // instance of date or is not
+    return
+
+
+
+
+
+
+    typeof value === 'object' && value !== null  &&  isnot date
+    //typeof value === 'object' && value !== null && || array.isarray(value instanceof Date) {
+
   return true;
+   //** */ return true;
+    // else if statement
+  //} else  if ( Array.isArray(value)) || typeof value === 'object' {
+ // *} else  if ( Array.isArray(value)) {
+    // return
+   //?return true;
   // else if statement || } else if (type of === value){
-  } else if (typeof value === 'object'){
+  // *} else if (typeof value === 'object') {
     // return true
   //} else {
-   return true;
+   //*return true;
   } else {
-  
-    return false;
+
+   return false;
   }
-  
+
   // YOUR CODE ABOVE HERE //
 }
-
 /**
  * Given an input value, return the type of the value as a String
  *
